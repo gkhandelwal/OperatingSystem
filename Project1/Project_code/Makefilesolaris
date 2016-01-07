@@ -1,0 +1,10 @@
+all: question1 question2a question2b question3
+
+question1: question1.c
+	gcc -o question1 question1.c -lpthread -lnsl -lsocket -lresolv
+question2a: question2a.c
+	gcc -o question2a question2a.c -lrt -lnsl -lsocket -lresolv
+question2b: question2b.c
+	gcc -o question2b question2b.c -lnsl -lsocket -lresolv
+question3: question3.c
+	gcc -o question3 question3.c -lnsl -lsocket -lresolv

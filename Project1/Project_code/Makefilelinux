@@ -1,0 +1,11 @@
+all: question1 question2a question2b question3
+
+question1: question1.c
+	gcc -o question1 question1.c -lpthread
+question2a: question2a.c
+	gcc -o question2a question2a.c -lrt
+question2b: question2b.c
+	gcc -o question2b question2b.c
+question3: question3.c
+	gcc -o question3 question3.c
+

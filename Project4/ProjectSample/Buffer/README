@@ -1,0 +1,21 @@
+Compiling and installing the scullBuffer device:
+--------------------------------------------------
+1. Execute Make: 
+   make
+2. If scull devices already exist then unload them first.
+   sudo ./unload.py
+   This may ask you for your root password.
+3. Load scull devices
+   sudo ./load.py scull_size=x
+   This will create one scull buffer device: /dev/scullBuffer0
+   
+Running / Testing:
+$ echo "hello world" | tee /dev/scullBuffer0
+hello world
+$ cat /dev/scullBuffer0
+hello world
+$ echo "foo 1 2 3" | tee /dev/scullBuffer0
+foo 1 2 3
+$ cat /dev/scullBuffer0
+foo 1 2 3
+
